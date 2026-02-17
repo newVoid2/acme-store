@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router";
 import Home from "./routes/home/Home";
 import NavBar from "./routes/navigation/NavBar";
+import SignIn from "./routes/sign-in/SignIn";
 
 
 const App = () => {
@@ -13,6 +14,10 @@ const App = () => {
         {
           index: true,
           Component: Home,
+        },
+        {
+          path: 'signin',
+          Component: SignIn
         }
       ]
       

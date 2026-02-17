@@ -9,7 +9,7 @@ const NavBar = () => {
             <LogoSvg/>
         </Link>
         <div className="links-container">
-            <Link className="link" to='/shop'>Shop</Link>
+            <Link className="link" to='/signin'>SignIn</Link>
         </div>
       </nav>
       <main>
