@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router";
 import Home from "./routes/home/Home";
 import NavBar from "./routes/navigation/NavBar";
-import SignIn from "./routes/sign-in/SignIn";
+import Authentication from "./routes/Authentication/Authentication";
 
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
           Component: Home,
         },
         {
-          path: 'signin',
-          Component: SignIn
+          path: 'auth',
+          Component: Authentication
         }
       ]
       

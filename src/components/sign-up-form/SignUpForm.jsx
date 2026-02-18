@@ -45,13 +45,9 @@ const SignUpForm = () => {
                     console.log('error during signup', err.code, err.message)
                 }
             }
-        }
-
-        
-
+        }  
     }
-    handleSubmit();
-;
+
     const handleChange = (event) => {
         const {name, value} = event.target;
         setFormFields({...formFields, [name]: value})
@@ -60,7 +56,7 @@ const SignUpForm = () => {
 
     return(
         <div className="sign-up-container">
-            <h2>Don't have an account?</h2>
+            <h2>I do not have an account</h2>
             <span>Sign up with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput label="Display Name" inputOptions = {{ type: "text", required: true, onChange: handleChange, name: "displayName", value: displayName }}/>
