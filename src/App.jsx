@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router";
 import Home from "./routes/home/Home";
 import NavBar from "./routes/navigation/NavBar";
 import Authentication from "./routes/Authentication/Authentication";
+import { UserProvider } from "./contexts/userProvider";
 
 
 const App = () => {
@@ -24,7 +25,9 @@ const App = () => {
     }
   ])
   return (
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState} from "react"
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utilities/firebase/firebase"
 import { updateProfile } from "firebase/auth"
 import FormInput from "../form-input/FormInput"
