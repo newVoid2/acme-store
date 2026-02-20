@@ -4,6 +4,9 @@ import Home from "./routes/home/Home";
 import NavBar from "./routes/navigation/NavBar";
 import Authentication from "./routes/Authentication/Authentication";
 import { UserProvider } from "./contexts/userProvider";
+import { ShopProvider } from "./contexts/shopProvider";
+import { CartProvider } from "./contexts/cartProvider";
+import Shop from "./routes/shop/Shop";
 
 
 const App = () => {
@@ -17,6 +20,10 @@ const App = () => {
           Component: Home,
         },
         {
+          path: 'shop',
+          Component: Shop
+        },
+        {
           path: 'auth',
           Component: Authentication
         }
@@ -26,7 +33,11 @@ const App = () => {
   ])
   return (
     <UserProvider>
-      <RouterProvider router={router} />
+      <ShopProvider>
+        <CartProvider>
+          <RouterProvider router={router} />
+        </CartProvider>
+      </ShopProvider>
     </UserProvider>
   );
 }
